@@ -1,0 +1,106 @@
+.sidenav {
+  background-color: #C6C6C6;
+  transition: all 0.5s ease;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 5rem;
+  height: 100vh;
+  box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
+}
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    padding: 0.93rem 0.938rem 0 0.938rem;
+    width: 100%
+  }
+    .logo {
+      background-color: #C6C6C6;
+      text-align: center;
+      width: 3rem;
+      min-width: 3rem;
+      border-radius: 0.313rem;
+      padding: 0.313rem;
+      font-size: 24px;
+      cursor: pointer;
+      border: none;
+    }
+    .logo-text {
+      margin-left: auto;
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .btn-close {
+      margin-left: auto;
+      cursor: pointer;
+      width: 2rem;
+      height: 2rem;
+      background-color: transparent;
+      border-radius: 50%;
+      border: none;
+    }
+
+      .fa-times {
+        color: #fff;
+        font-size: 24px;
+      }
+    
+  
+  .sidenav-collapsed {
+    width: 16.2655rem;
+  }
+
+.sidenav-nav {
+  list-style: none;
+  padding: 0.938rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100% - 3.65rem);
+  cursor: pointer;
+}
+
+  .sidenav-nav-item {
+    width: 100%;
+    margin-bottom: 0.625rem;
+  }
+    .sidenav-nav-link {
+      display: flex;
+      height: 3rem;
+      align-items: center;
+      color: #404040;
+      border-radius: 0.625rem;
+      text-decoration: none;
+      transition: all .3s ease;
+    }
+      .sidenav-link-icon {
+        font-size: 22px;
+        width: 2rem;
+        min-width: 2rem;
+        margin: 0 0.5rem;
+        text-align: center;
+      }
+      .sidenav-link-text {
+        margin-left: 1.5rem;
+      }
+      .sidenav-nav-link:hover{
+        background-color: #595959;
+        color: #000;
+      }
+      .sidenav-link-icon:hover{
+        background-color: #595959;
+        color: #000;
+      }
+      .sidenav-link-text:hover{
+        color: #000;
+      }
+      .active{
+        background-color: #595959;
+        color: #000;
+      }
+    
+  
+
