@@ -1,22 +1,24 @@
 .sidenav {
-  background-color: #C6C6C6;
+  background-color: #131d2b;
+  /* background-image: url(/recapdb/src/app/background.jpg); */
   transition: all 0.5s ease;
   position: fixed;
   z-index: 1;
   top: 0;
   width: 5rem;
   height: 100vh;
-  box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
+  box-shadow: 0.063rem 0 1.25rem 0 #66FCF1;
 }
 
   .logo-container {
     display: flex;
     align-items: center;
-    padding: 0.93rem 0.938rem 0 0.938rem;
+    padding: 0.98rem 0.938rem 0 0.938rem;
     width: 100%
   }
     .logo {
-      background-color: #C6C6C6;
+      background-color: #131d2b;
+      color: #66FCF1;
       text-align: center;
       width: 3rem;
       min-width: 3rem;
@@ -30,7 +32,7 @@
       margin-left: auto;
       font-size: 24px;
       font-weight: 700;
-      color: #fff;
+      color: #66FCF1;
     }
     .btn-close {
       margin-left: auto;
@@ -43,18 +45,18 @@
     }
 
       .fa-times {
-        color: #fff;
+        color: red;
         font-size: 24px;
       }
-    
   
   .sidenav-collapsed {
-    width: 16.2655rem;
+    width: 14.2655rem;
   }
 
 .sidenav-nav {
   list-style: none;
   padding: 0.938rem;
+  color: #66FCF1;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -71,7 +73,7 @@
       display: flex;
       height: 3rem;
       align-items: center;
-      color: #404040;
+      color: #66FCF1;
       border-radius: 0.625rem;
       text-decoration: none;
       transition: all .3s ease;
@@ -79,27 +81,29 @@
       .sidenav-link-icon {
         font-size: 22px;
         width: 2rem;
+        color: rgb(141, 141, 184);
         min-width: 2rem;
         margin: 0 0.5rem;
         text-align: center;
       }
       .sidenav-link-text {
-        margin-left: 1.5rem;
+        margin-left: 1rem;
+        align-items: center;
       }
       .sidenav-nav-link:hover{
         background-color: #595959;
-        color: #000;
+        color: #66FCF1;
       }
       .sidenav-link-icon:hover{
-        background-color: #595959;
-        color: #000;
+        color: #66FCF1;
       }
       .sidenav-link-text:hover{
-        color: #000;
+        align-items: center;
+        color: #66FCF1;
       }
       .active{
         background-color: #595959;
-        color: #000;
+        color: #66FCF1;
       }
     
   

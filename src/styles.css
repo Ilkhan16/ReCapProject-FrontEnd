@@ -8,9 +8,17 @@
 }
 
 body {
+  font-family: "Roboto",Verdana, monospace, Tahoma, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: justify;
+  min-height: 800px;
+  background-image: url(app/background.jpg);
+  background-size: cover;
+  background-attachment: scroll;
   position: relative;
-  font-family: "Roboto", sans-serif;
 }
+
 
 .card {
   display: flex;

@@ -1,14 +1,14 @@
 .body{
     width: calc(100%-5rem);
-    height: 100vh;
+    /* height: 100vh; */
     margin-left: 5rem;
     z-index: 0;
     position: relative;
     top: 0;
     transition: all .5s ease;
-    background-color: #595959;
+    /* background-image: url('/recapdb/src/app/background.jpg'); */
     background-repeat: repeat;
-    background-attachment: local;
+    background-attachment: local; 
     padding: 3rem;
 
 }

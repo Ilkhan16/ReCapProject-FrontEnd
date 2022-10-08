@@ -5,6 +5,7 @@ import { CarComponent } from './components/car/car.component';
 import { ColorComponent } from './components/color/color.component';
 import { CustomerComponent } from './components/customer/customer.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { RentalComponent } from './components/rental/rental.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'dashboard',pathMatch:'full'},
@@ -13,7 +14,7 @@ const routes: Routes = [
   {path:'colors',component:ColorComponent},
   {path:'cars',component:CarComponent},
   {path:'customers',component:CustomerComponent},
-  {path:'rentals',component:DashboardComponent},
+  {path:'rentals',component:RentalComponent},
 
 ];
 

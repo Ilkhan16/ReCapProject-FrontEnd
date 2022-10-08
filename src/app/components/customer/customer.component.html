@@ -2,35 +2,40 @@
     <div
       *ngIf="dataLoaded == false"
       class="spinner-border text-success"
-      role="status"
-    >
+      role="status">
       <span class="visually-hidden">Loading...</span>
     </div>
   </div>
-  
+
   <style>
-      table,th 
+      table 
     {
-  background-color: #D5D5D5;
-  border: 2px solid #404040;
+  background-color: #1F2833;
+  color: #fff;
+  border: 1px solid #66FCF1;
   border-collapse: collapse;
   text-align: center;
   background-attachment: fixed;
     }
+    th 
+    {
+      background-color: #0B0C10;
+      color: #66FCF1;
+        border: 1px solid #66FCF1;
+        padding:10px;
+    }
   td 
     {
-        border: 1px solid black;
-        padding:8px;
+        border: 1px solid #66FCF1;
+        padding:10px;
     }
-  tr:first-child
-    {
-        height:80px;
-        color: #8B5A00;
-        font-weight:bolder;
+    tr:nth-child(2n+3){
+      background-color:#324155;
+      color: #fff;
     }
-    tr:nth-child(2n+3){background-color:#8090A3;}
-    
 </style>
+
+
 <table class="table" *ngIf="dataLoaded == true">
   <thead>
     <th>Customer ID</th>
@@ -41,6 +46,5 @@
     <td>{{ customer.id }}</td>
     <td>{{ customer.userId }}</td>
     <td>{{ customer.companyName }}</td>
-
   </tr>
 </table>

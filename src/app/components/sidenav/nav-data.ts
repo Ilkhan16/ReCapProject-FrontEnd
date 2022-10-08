@@ -1,7 +1,7 @@
 export const navbarData=[
 {
     routeLink:'dashboard',
-    icon:'fal fa-home',
+    icon:'fa-solid fa-house', 
     label:'Dashboard'
 },
 {
@@ -11,22 +11,22 @@ export const navbarData=[
 },
 {
     routeLink:'cars',
-    icon:'fa-solid fa-car-side',
+    icon:'fa-solid fa-car', 
     label:'Cars'
 },
-{
+{ 
     routeLink:'customers',
     icon:'fa-solid fa-user',
     label:'Customers'
 },
 {
     routeLink:'rentals',
-    icon:'fal fa-home',
+    icon:'fa-solid fa-cart-shopping',
     label:'Rentals'
 },
 {
     routeLink:'colors',
-    icon:'fa-solid fa-palette',
+    icon:'fa-solid fa-droplet',
     label:'Colors'
 },
 ]

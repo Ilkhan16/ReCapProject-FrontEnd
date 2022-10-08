@@ -35,24 +35,19 @@ td
     color: #fff;
   }
 </style>
-
-<table class="table" *ngIf="dataLoaded == true">
-  <thead>
-    <th>Car ID</th>
-    <th>Brand Name</th>
-    <th>Car Name</th>
-    <th>Color</th>
-    <th>Model Year</th>
-    <th>Daily Price</th>
-    <th>Description</th>
-  </thead>
-  <tr *ngFor="let car of cars">
-    <td>{{ car.carId }}</td>
-    <td>{{ car.brandName }}</td>
-    <td>{{ car.carName }}</td>
-    <td>{{ car.colorName }}</td>
-    <td>{{ car.modelYear }}</td>
-    <td>{{ car.dailyPrice }}</td>
-    <td>{{ car.description }}</td>
-  </tr>
-</table>
+  
+  <table class="table" *ngIf="dataLoaded == true">
+    <thead>
+      <th>Customer Name</th>
+      <th>Brand Name</th>
+      <th>Rental Date</th>
+      <th>Return Date</th>
+    </thead>
+    <tr *ngFor="let rental of rentals">
+      <td>{{ rental.fullName }}</td>
+      <td>{{ rental.brandName }}</td>
+      <td>{{ rental.rentalDate }}</td>
+      <td>{{ rental.returnDate }}</td>
+    </tr>
+  </table>
+  
