@@ -1,0 +1,22 @@
+table {
+  background-color: #1f2833;
+  color: #fff;
+  border: 1px solid #66fcf1;
+  border-collapse: collapse;
+  text-align: center;
+  background-attachment: fixed;
+}
+th {
+  background-color: #0b0c10;
+  color: #66fcf1;
+  border: 1px solid #66fcf1;
+  padding: 10px;
+}
+td {
+  border: 1px solid #66fcf1;
+  padding: 10px;
+}
+tr:nth-child(2n + 3) {
+  background-color: #324155;
+  color: #fff;
+}

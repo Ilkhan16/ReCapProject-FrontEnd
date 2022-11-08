@@ -1,61 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Detail Page</title>
-  </head>
-  <body>
-    
-  </body>
-  </html>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="https://kit.fontawesome.com/107a5454f8.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<html>
-  <div class="container" *ngFor="let carDetail of carDetails">
-    <div
-      id="carouselExampleIndicators"
-      class="carousel"
-      data-bs-ride="carousel"
-    >
-        <button class="btn btn-outline-success btn-lg"
-          target="_blank"
-          type="button"
+  <body>
+    <div class="container" *ngFor="let carDetail of carDetails">
+      <nav>
+        <div class="logo">
+          <img src="/recapdb/src/assets/image/netCar.png" />
+        </div>
+        <div class="headline">
+          <b> {{ carDetail.description }} </b>
+        </div>
+        <div class="nav-links">
+          <a href="#">
+            <a href="#" class="fa fa-twitter"></a>
+          </a>
+          <a href="#">
+            <a href="#" class="fa fa-facebook"></a>
+          </a>
+          <a href="#">
+            <a href="#" class="fa fa-instagram"></a>
+          </a>
+        </div>
+      </nav>
+      <div class="row">
+        <div
+          id="carouselExampleFade"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
         >
-          LET'S RENT!
-          <h5 class="card-text">
-            Günlük Fiyatı | {{ carDetail.dailyPrice | currency: "₺" }}
-          </h5>
-        </button>
+        <div class="carousel-indicators" *ngIf="defpng==true">
+          <button 
+            *ngFor="let image of carImages; let i = index"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            attr.data-bs-slide-to="{{ i }}"
+            [class]="getButtonClass(image)"
+            aria-current="true"
+            aria-label="Slide 2"
+          ></button>
+        </div>
+          <div
+            class="box1"
+            *ngFor="let image of carImages"
+            [class]="getCurrentImageClass(image)"
+          >
+          <img
+            [src]="getCarImage(image, image.carId)"
+            class="d-block w-100"
+            alt="Image"
+          />
+          <button *ngIf="defpng==true" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button  *ngIf="defpng==true" class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+          </div>
+        </div>
 
-
-      <div class="card">
-        <ul>
-          <b> CarId {{ carDetail.carId }} Details</b>
-          <li>
-            <strong class="list-item-name">Car Name</strong>
-            &nbsp;
-            <span class="list-item-value">{{ carDetail.carName }}</span>
-          </li>
-          <li>
-            <strong class="list-item-name">Car Name</strong>
-            &nbsp;
-            <span class="list-item-value">{{ carDetail.carName }}</span>
-          </li>
-          <li>
-            <strong class="list-item-name">Car Name</strong>
-            &nbsp;
-            <span class="list-item-value">{{ carDetail.carName }}</span>
-          </li>
-          <li>
-            <strong class="list-item-name">Car Name</strong>
-            &nbsp;
-            <span class="list-item-value">{{ carDetail.carName }}</span>
-          </li>
-        </ul>
+        <div class="box2">
+          <ul>
+            <header> Car {{ carDetail.carId }} Details </header>
+            <li>
+              <strong class="list-item-name">Car No</strong>
+              &nbsp;
+              <span class="list-item-value">{{ carDetail.carId }}</span>
+            </li>
+            <li>
+              <strong class="list-item-name">Brand</strong>
+              &nbsp;
+              <span class="list-item-value">{{ carDetail.brandName }}</span>
+            </li>
+            <li>
+              <strong class="list-item-name">Model Year</strong>
+              &nbsp;
+              <span class="list-item-value">{{ carDetail.modelYear }}</span>
+            </li>
+            <li>
+              <strong class="list-item-name">Car Name</strong>
+              &nbsp;
+              <span class="list-item-value">{{ carDetail.carName }}</span>
+            </li>
+            <li>
+              <strong class="list-item-name">Color</strong>
+              &nbsp;
+              <span class="list-item-value">{{ carDetail.colorName }}</span>
+            </li>
+            <li>
+              <strong class="list-item-name">Daily Price</strong>
+              &nbsp;
+              <span class="list-item-value">{{ carDetail.dailyPrice }}</span>
+            </li>
+            <li>
+              <strong class="list-item-name">Description</strong>
+              &nbsp;
+              <span class="list-item-value">{{ carDetail.description }}</span>
+            </li>
+          </ul>
+          <button type="button" class="btn btn-outline-success">
+            <b>Let's Rent!</b>
+          </button>
+        </div>
       </div>
-  </div>
-</div>
+    </div>
+  </body>
 </html>
+

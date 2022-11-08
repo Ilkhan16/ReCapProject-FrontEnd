@@ -41,8 +41,8 @@ td
     <th>Color ID</th>
     <th>Color Name</th>
   </thead>
-  <tr *ngFor="let color of colors">
-    <td>{{ color.id }}</td>
+  <tr *ngFor="let color of colors" (click)="setCurrentColor(color)" routerLink="/cars/color/{{color.colorId}}">
+    <td>{{color.colorId}}</td>
     <td>{{ color.colorName }}</td>
   </tr>
 </table>

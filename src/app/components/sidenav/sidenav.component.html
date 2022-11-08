@@ -1,7 +1,7 @@
 <div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed':''">
     <div class="logo-container">
-        <button class="logo" (click)="toggleCollapse()">RC</button>
-            <div class="logo-text" @fadeInOut *ngIf="collapsed">ReCap</div>
+        <img class="logo" src="recapdb\src\assets\image\netCar.png" alt="logo"(click)="toggleCollapse()">
+            <div class="logo-text" @fadeInOut *ngIf="collapsed">.NetCar</div>
                 <button class="btn-close" @rotate *ngIf="collapsed"(click)="closeSidenav()">
                     <i class="fal fa-times close-icon"></i>
                 </button>

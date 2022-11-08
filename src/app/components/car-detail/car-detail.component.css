@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+li {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0px;
+  background-position-y: 0px;
+  border-bottom-color: rgb(204, 204, 204);
+  border-bottom-style: dotted;
+  list-style-type: none;
+  border-bottom-width: 1px;
+  color: rgb(0, 0, 0);
+  display: list-item;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  background-size: auto;
+  font-weight: 500;
+  height: 66px;
+  line-height: normal;
+  margin: 0px 0px 0px 0px;
+  padding: 10px 0px 10px 0px;
+  text-align: left;
+  text-size-adjust: 100%;
+  zoom: 1;
+}
+
+ul li::before {
+  zoom: 1;
+  content: "";
+  clear: both;
+  height: 15px;
+  display: table;
+}
+ul li::after {
+  zoom: 1;
+  content: "";
+  height: 15px;
+  display: table;
+}
+
+nav {
+  background-color: rgb(49, 64, 87);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.row {
+  height: 600px;
+  width: auto;
+  justify-content: space-between;
+}
+
+.row .box2 {
+  flex-basis: 35%;
+  justify-content: center;
+  padding: 2px;
+  width: 50px;
+}
+
+.row .box2 ul li .list-item-value {
+  margin-right: 20px;
+  float: right;
+}
+.row .box2 ul li .list-item-name {
+  font-weight: 700px;
+  margin-left: 20px;
+  float: left;
+  width: 115px;
+}
+
+.row .box2 ul header{
+  text-align: center;
+  color: darkblue;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.row .box2 button {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 30;
+  position: absolute;
+  bottom: 2px;
+  height: 50px;
+  width: 433px;
+}
+
+.row .carousel {
+  width: 800px;
+  height: 600px;
+  flex-basis: 65%;
+  flex-direction: column;
+}
+.row .carousel img {
+  width: 800px;
+  height: 600px;
+}
+
+.logo {
+  align-items: center;
+  cursor: pointer;
+  width: 50;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+
+nav .nav-links a {
+  text-decoration: none;
+  display:inline-block;
+color:#75cec6;
+font-size:25px;
+}
+
+nav .nav-links {
+  display: flex;
+  column-gap: 20px;
+}
+
+.carousel.fade {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition: opacity ease-out 0.7s;
+  height: 0px;
+}
+
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right {
+  opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-right {
+  opacity: 0;
+}
+
+.carousel-fade .carousel-item.active,
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-prev {
+  height: 600px;
+  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
+}

@@ -7,43 +7,13 @@
     <span class="visually-hidden">Loading...</span>
   </div>
 </div>
-
-<style>
-    table 
-  {
-background-color: #1F2833;
-color: #fff;
-border: 1px solid #66FCF1;
-border-collapse: collapse;
-text-align: center;
-background-attachment: fixed;
-  }
-  th 
-  {
-    background-color: #0B0C10;
-    color: #66FCF1;
-      border: 1px solid #66FCF1;
-      padding:10px;
-  }
-td 
-  {
-      border: 1px solid #66FCF1;
-      padding:10px;
-  }
-  tr:nth-child(2n+3){
-    background-color:#324155;
-    color: #fff;
-  }
-</style>
-
 <table class="table"  *ngIf = "dataLoaded==true">
     <thead>
         <th>Brand ID</th>
         <th>Brand Name</th>
     </thead>
-    <tr *ngFor="let brand of brands">
-      
-        <td class="td">{{ brand.id }}</td>
-        <td >{{ brand.brandName }}</td>
+    <tr *ngFor="let brand of brands" (click)="setCurrentBrand(brand)" routerLink="/cars/brand/{{brand.brandId}}">
+        <td>{{brand.brandId}}</td>
+        <td>{{brand.brandName}}</td>
     </tr>
 </table>
